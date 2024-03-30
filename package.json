@@ -1,0 +1,19 @@
+{
+  "name": "mern_stack",
+  "version": "1.0.0",
+  "description": "A MERN project.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soumytiwari/MERN_stack.git"
+  },
+  "author": "Soumya Tiwari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soumytiwari/MERN_stack/issues"
+  },
+  "homepage": "https://github.com/soumytiwari/MERN_stack#readme"
+}
