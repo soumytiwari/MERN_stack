@@ -10,10 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/soumytiwari/MERN_stack.git"
   },
+  "keywords": [],
   "author": "Soumya Tiwari",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/soumytiwari/MERN_stack/issues"
   },
-  "homepage": "https://github.com/soumytiwari/MERN_stack#readme"
+  "homepage": "https://github.com/soumytiwari/MERN_stack#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
