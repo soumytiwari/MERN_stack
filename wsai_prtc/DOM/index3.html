@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+            /* color: rgb(23, 110, 90); */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">Hello, Dom!</h1>
+    <button id="changeTextBtn">Change Text</button>
+    <button id="changeColorBtn">Change Color</button>
+    <button id="addElementBtn">Add Element</button>
+    <button id="removeElementBtn">Remove Element</button>
+
+    <script>
+        let header = document.querySelector("#header")
+
+        // change text
+        let changeText = document.querySelector("#changeTextBtn")
+        changeText.addEventListener("click", function() {
+            const texts = ["Hello babe 😉", "I am fun!! 😜", "Go study!", "Let's work.", "Let's have fun!🎈", "Let's play buddy"]
+            header.innerHTML = texts[Math.floor(Math.random() * texts.length)]
+        })
+
+        // change color
+        let changeColor = document.getElementById("changeColorBtn")
+        changeColor.addEventListener("click", function() {
+            const colors = ["red", "pink", "aquamarine", "rgb(255, 127, 204)", "rgb(127, 129, 255)", "rgb(246, 255, 127)", "rgb(255, 131, 127)"]
+            const colorsT = ["red", "pink", "rgb(23, 74, 110)", "rgb(23, 110, 90)", "rgb(127, 129, 255)", "rgb(246, 255, 127)", "rgb(255, 131, 127)", "black"]
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]
+            header.style.color = colorsT[Math.floor(Math.random() * colorsT.length)]
+        })
+
+        // add element
+        let addElement = document.getElementById("addElementBtn")
+        addElement.addEventListener("click", function() {
+            let para = document.createElement("p")
+            const texts = ["Jenny made the announcement that her baby was an alien.", "The thunderous roar of the jet overhead confirmed her worst fears.", "It was always dangerous to drive with him since he insisted the safety cones were a slalom course.", "Please wait outside of the house.", "My secretary is the only person who truly understands my stamp-collecting obsession.", "Everyone says they love nature until they realize how dangerous she can be.", "Her ultimate dream fantasy consisted of being content and sleeping eight hours in a row.", "He did her best to help her.", "My biggest joy is roasting almonds while stalking prey.", "The fence was confused about whether it was supposed to keep things in or keep things out.", "Shingle color was not something the couple had ever talked about."]
+            para.innerHTML = texts[Math.floor(Math.random() * texts.length)]
+            document.body.appendChild(para)
+        })
+
+        // remove element
+        let removeElement = document.getElementById("removeElementBtn")
+        removeElement.addEventListener("click", function() {
+            let pragraphs = document.querySelectorAll("p")
+            console.log(pragraphs)
+            if (pragraphs.length > 0) {
+                document.body.removeChild(pragraphs[pragraphs.length - 1])
+            }
+        })
+        
+    </script>
+</body>
+</html> 

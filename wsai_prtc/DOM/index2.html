@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(127, 255, 185);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Thursday</div>
+    </div>
+    <script>
+        const parent = document.querySelector(".parent")
+
+        // create an element
+        const div = document.createElement("div")
+        // add content to the element
+        div.innerHTML = "Friday"
+        div.id = "generated"
+        div.className = "day"
+        div.setAttribute("title", "generated day")
+        div.style.color = "red"
+        // display the element
+        parent.appendChild(div)
+        console.log(parent)
+
+        const image = document.createElement("img")
+        image.src = "https://imgs.search.brave.com/g0YAf-hOZljpMDO04n0lUWrZMh2gC4A7xvK54QFL_9s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2Q3LzMz/L2ZkL2Q3MzNmZGY2/YmI1N2MwOTY4Y2Q4/NWNlMGQ2ZGRjMjk2/LmpwZw"
+        // image.style.height = "500px"
+        image.style.width = "600px"
+        document.body.appendChild(image)
+
+        // delete the element
+        let oldImg = document.querySelector("img")
+        document.body.removeChild(oldImg)
+
+    </script>
+</body>
+</html>
